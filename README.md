@@ -29,16 +29,14 @@ September 2024
 
 </div>
 
-
 # Qualitative Evaluation
 ## Sign Stitching
-[Chapter 5](../Ch5/README.md)
+[Chapter 5](./Ch5/README.md)
 
 ## Vector Quantized Sign Language Production
-[Chapter 6 ](../Ch6/README.md)
+[Chapter 6 ](./Ch6/README.md)
 
 ## Thesis PDF 
-Coming soon... 
-
+Coming soon...
 
 Copyright (c) 2025 Harry Walsh
