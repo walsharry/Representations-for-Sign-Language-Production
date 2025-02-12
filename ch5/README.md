@@ -183,11 +183,9 @@ Despite our additional optimization when extracting the ground truth from the or
 <img src="videos/translations/TranslationDemo_phix_279.gif"/>
 
 
+### Comparison with Progressive Transformer
 
-<!-- LICENSE -->
-## License
 
-Distributed under the Attribution-NonCommercial-ShareAlike 4.0 International License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -201,3 +199,4 @@ Distributed under the Attribution-NonCommercial-ShareAlike 4.0 International Lic
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [mdgs_cb_1]: https://github.com/walsharry/VQ_SLP/assets/50142465/4cbc73dc-02f9-44c7-b478-952c4ccc8b30
 
+Copyright (c) 2025 Harry Walsh
