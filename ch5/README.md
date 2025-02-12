@@ -22,6 +22,7 @@ Note to emphasize the effect of the different steps in the pipeline, we omit the
 
 Here we show the original isolated sign on the left and the cropped sign on the right.
 See how our method extracts the essential part of the sign.
+
 <div align="center">
 
 | Isolated Sign                                                                  | Cropped Sign                                | 
@@ -37,27 +38,40 @@ See how our method extracts the essential part of the sign.
 To show the effect of the smart stitching module, we create a sequence that uses 9 frames to stitch the signs together (9 being the max number from frames the smart stitching module use to create the normal sequence).
 To emphasize the need to select the correct number of frames for stitching, we also omit sequence resampling (step 6).
 
+<div align="center">
+
 Left: Original sequence, Middle: Stitched sequence and Right: Stitched sequence with constant stitching.
 
 <img src="videos/SmartStitchDemo.gif" width="650" height="266" />
+
+</div>
 
 Note the slow unnatural transition between the signs and the constant change in speed between signs.
 
 ## Filter Matching effect (step 7)
 
+<div align="center">
+
 Left: Original sequence, Middle: Stitched sequence and Right: Stitched sequence without filter matching.
 
 <img src="videos/FilteringDemo.gif" width="650" height="266" />
+
+</div>
 
 Note the quick movements without filter matching that are not present in the original sequence.
 
 ## Stitching Examples
 Here we share more examples of sign stitching.
 
+<div align="center">
+
 <img src="videos/StitchedDemo1.gif" width="650" height="300" />
+
 <img src="videos/StitchedDemo2.gif" width="650" height="300" />
+
 <img src="videos/StitchedDemo3.gif" width="650" height="300" />
 
+</div>
 
 ## Face Expression Dictionary
 Using a Noise Substitution Vector Quantization (NSVQ) Transformer model, we learn a dictionary of facial expressions. Facial expressions are added to each gloss in step 4 of the stitching pipline. Thus, the output from the system includes both manual and non-manual features.
