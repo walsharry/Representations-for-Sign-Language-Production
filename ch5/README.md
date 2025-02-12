@@ -22,6 +22,7 @@ Note to emphasize the effect of the different steps in the pipeline, we omit the
 
 Here we show the original isolated sign on the left and the cropped sign on the right.
 See how our method extracts the essential part of the sign.
+<div align="center">
 
 | Isolated Sign                                                                  | Cropped Sign                                | 
 |--------------------------------------------------------------------------------|---------------------------------------------|
@@ -30,6 +31,7 @@ See how our method extracts the essential part of the sign.
 | <img src="videos/cropped_signs/IsolatedSignGROW-UP.gif" width="200" height="200" /> | <img src="videos/cropped_signs/CroppedSignGROW-UP.gif" width="200" height="200" /> |
 | <img src="videos/cropped_signs/IsolatedSignFAMILY.gif" width="200" height="200" /> | <img src="videos/cropped_signs/CroppedSignFAMILY.gif" width="200" height="200" /> |
 
+</div>
 
 ## Smart Stitching (step 5)
 To show the effect of the smart stitching module, we create a sequence that uses 9 frames to stitch the signs together (9 being the max number from frames the smart stitching module use to create the normal sequence).
