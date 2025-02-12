@@ -1,34 +1,15 @@
-<a name="readme-top"></a>
+## Chapter 6: Vector Quantized Sign Language Production - Qualitative Evaluation
 
-<br />
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="Images/Logo.png" alt="Logo" width="400" height="150">
-  </a>
+By applying Vector Quantisation (VQ) to sign language data, we first learn a codebook of short motions that can be combined to create a natural sequence of sign. Where each token in the codebook can be thought of as the lexicon of our representation. Then using a transformer, we perform a translation from spoken language text to a sequence of codebook tokens. Each token can be directly mapped to a sequence of poses allowing the translation to be performed by a single network.
 
-  <h3 align="center">A Data-Driven Representation for Sign Language Production</h3>
-
-  <p align="center">
-    Vector Quantised Sign Language Production
-  </p>
-</div>
-
-<!-- ABOUT THE PROJECT -->
-# Abstract
-
-Phonetic representations are used when recording spoken languages, but no equivalent exists for recording signed languages. As a result, linguists have proposed several annotation systems that operate on the gloss or sub-unit level; however, these resources are notably irregular and scarce.
-
-Sign Language Production (SLP) aims to automatically translate spoken language sentences into continuous sequences of sign language. However, current state-of-the-art approaches rely on scarce linguistic resources to work. This has limited progress in the field. This paper introduces an innovative solution by transforming the continuous pose generation problem into a discrete sequence generation problem. Thus, overcoming the need for costly annotation. Although, if available, we leverage the additional information to enhance our approach. 
-
-By applying Vector Quantisation (VQ) to sign language data, we first learn a codebook of short motions that can be combined to create a natural sequence of sign. Where each token in the codebook can be thought of as the lexicon of our representation. Then using a transformer we perform a translation from spoken language text to a sequence of codebook tokens.  Each token can be directly mapped to a sequence of poses allowing the translation to be performed by a single network. Furthermore, we present a sign stitching method to effectively join tokens together. We evaluate on the  RWTH-PHOENIX-Weather-2014T (PHOENIX14T) and the more challenging Meine DGS Annotated (mDGS) datasets. An extensive evaluation shows our approach outperforms previous methods, increasing the BLEU-1 back translation score by up to 72\%.
-
+Overview of the approach to Sign Language Production (SLP) using Vector Quantization (VQ:
 
 ![system_overview]
-
+*Fig. 1: A overview of our approach to Sign Language Production ( SLP). Showing from top to bottom 1) the source spoken language sentence, 2) the data-driven token representation of sign, 3) the synthesized pose sequence, and, 4) the original video.*
 
 # Demos
 
-Previous approaches to SLP attempt to regress pose directly from the spoken language. This leads to underarticulated signing, as the signer regresses to the mean. Whereas, here by first learning a codebook we can ensure our new lexicon is expressive.
+Previous approaches to SLP attempt to regress pose directly from the spoken language. This leads to under-articulated signing, as the signer regresses to the mean. Whereas, here by first learning a codebook we can ensure our new lexicon is expressive.
 
 ## Codebook Tokens
 
