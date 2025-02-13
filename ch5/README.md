@@ -40,7 +40,7 @@ To emphasize the need to select the correct number of frames for stitching, we a
 
 <div align="center">
 
-Left: Original sequence, Middle: Stitched sequence and Right: Stitched sequence with constant stitching.
+[//]: # (Left: Original sequence, Middle: Stitched sequence and Right: Stitched sequence with constant stitching.)
 
 <img src="videos/SmartStitchDemo.gif" width="650" height="266" />
 
@@ -52,7 +52,7 @@ Note the slow unnatural transition between the signs and the constant change in 
 
 <div align="center">
 
-Left: Original sequence, Middle: Stitched sequence and Right: Stitched sequence without filter matching.
+[//]: # (Left: Original sequence, Middle: Stitched sequence and Right: Stitched sequence without filter matching.)
 
 <img src="videos/FilteringDemo.gif" width="650" height="266" />
 
@@ -78,12 +78,47 @@ Using a Noise Substitution Vector Quantization (NSVQ) Transformer model, we lear
 
 Here we show some examples from the dictionary;
 
-<img src="videos/face_dictionary_examples/Codebook_197.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_196.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_185.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_179.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_159.gif" width="150" height="150" /> 
-<img src="videos/face_dictionary_examples/Codebook_152.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_114.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_217.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_54.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_40.gif" width="150" height="150" /> 
-<img src="videos/face_dictionary_examples/Codebook_134.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_107.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_75.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_47.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_30.gif" width="150" height="150" /> 
-<img src="videos/face_dictionary_examples/Codebook_129.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_98.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_74.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_45.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_15.gif" width="150" height="150" /> 
-<img src="videos/face_dictionary_examples/Codebook_121.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_32.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_55.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_43.gif" width="150" height="150" /><img src="videos/face_dictionary_examples/Codebook_7.gif" width="150" height="150" /> 
+<div align="center">
 
+<table style="border-collapse: collapse;">
+  <tr>
+    <td><img src="videos/face_dictionary_examples/Codebook_197.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_196.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_185.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_179.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_159.gif" width="150" height="150" /></td>
+  </tr>
+  <tr>
+    <td><img src="videos/face_dictionary_examples/Codebook_152.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_114.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_217.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_54.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_40.gif" width="150" height="150" /></td>
+  </tr>
+  <tr>
+    <td><img src="videos/face_dictionary_examples/Codebook_134.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_107.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_75.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_47.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_30.gif" width="150" height="150" /></td>
+  </tr>
+  <tr>
+    <td><img src="videos/face_dictionary_examples/Codebook_129.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_98.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_74.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_45.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_15.gif" width="150" height="150" /></td>
+  </tr>
+  <tr>
+    <td><img src="videos/face_dictionary_examples/Codebook_121.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_32.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_55.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_43.gif" width="150" height="150" /></td>
+    <td><img src="videos/face_dictionary_examples/Codebook_7.gif" width="150" height="150" /></td>
+  </tr>
+</table>
+
+</div>
 
 ## Translation example
 Now we share example from the full translation system (Fig. 1 A + B + C). 
@@ -95,12 +130,16 @@ So the motion or even had shape may vary from the original sequence. However, th
 ![translation_overview]
 *Fig. 3: An overview of the Translation module.*
 
-We also show a comparison between our approach and the baseline model, the progressive transformer (PT). See how model regresses to the mean and produces under-articulated and incomprehensible signing. 
-Note we can only compare against the PT as it is the only SLP model that is publicly available.
 
-Video 1: Original sequence, Video 2: Progressive Transformer, Video 3: Stitched sequence and Video 4: SignGAN output. 
+Video 1: Original sequence, Video 2: Stitched sequence and Video 3: SignGAN output. 
 
 ### German Sign Language - Deutsche Gebärdensprache
+
+[//]: # (17October_2009_Saturday_tagesschau-2138 MITTWOCH WEST WOLKE ACHT BIS SECHSZEHN)
+
+[//]: # (06January_2010_Wednesday_heute-3523 HEUTE NACHT MEHR SCHNEE NORD SUEDOST)
+
+[//]: # (05April_2010_Monday_tagesschau-3546 JETZT WETTER MORGEN DIENSTAG SECHSTE APRIL)
 
 **TEXT**: heute nacht dagegen fallen nur ein paar schneeflocken noch im norden und auch im südosten 	
 
@@ -200,6 +239,9 @@ Despite our additional optimization when extracting the ground truth from the or
 
 
 ### Comparison with Progressive Transformer
+
+We also show a comparison between our approach and the baseline model, the progressive transformer (PT). See how model regresses to the mean and produces under-articulated and incomprehensible signing. 
+Note we can only compare against the PT as it is the only SLP model that is publicly available.
 
 
 
