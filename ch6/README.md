@@ -7,11 +7,21 @@ Overview of the approach to Sign Language Production (SLP) using Vector Quantiza
 ![system_overview]
 *Fig. 1: A overview of our approach to Sign Language Production ( SLP). Showing from top to bottom 1) the source spoken language sentence, 2) the data-driven token representation of sign, 3) the synthesized pose sequence, and, 4) the original video.*
 
-# Demos
+## Contents
+- [Codebook Visualization](#codebook-visualization)
+  - [RWTH-PHOENIX-Weather-2014**T**](#rwth-phoenix-weather-2014t)
+  - [Meine DGS Annotated](#meine-dgs-annotated)
+- [Translation Examples](#translation-examples)
+  - [German Sign Language - Deutsche Gebärdensprache](#german-sign-language---deutsche-gebärdensprache)
+  - [Meine DGS Annotated](#meine-dgs-annotated-1)
+  - [Stitching Module](#stitching-module)
+  - [SignGAN Module](#signgan-module)
+  - [Comparison to Progressive Transformer](#comparison-to-progressive-transformer)
 
+    
 Previous approaches to SLP attempt to regress pose directly from the spoken language. This leads to under-articulated signing, as the signer regresses to the mean. Whereas, here by first learning a codebook we can ensure our new lexicon is expressive.
 
-## Codebook Tokens
+## Codebook Visualization
 
 Here we present example tokens from the Codebooks.
 
@@ -122,11 +132,11 @@ Note, in the following examples we show the baseline model without the stitching
 
 <div align="center">
 
-<img src="./videos/translation_examples/phix/Sequence_1.gif" width="1080" height="350" />
-<img src="./videos/translation_examples/phix/Sequence_19.gif" width="1080" height="350" />
-<img src="./videos/translation_examples/phix/Sequence_305.gif" width="1080" height="350" />
-<img src="./videos/translation_examples/phix/Sequence_387.gif" width="1080" height="350" />
-<img src="./videos/translation_examples/phix/Sequence_404.gif" width="1080" height="350" />
+<img src="./videos/translation_examples/phix/Sequence_1.gif" width="850" height="300" />
+<img src="./videos/translation_examples/phix/Sequence_19.gif" width="850" height="300" />
+<img src="./videos/translation_examples/phix/Sequence_305.gif" width="850" height="300" />
+<img src="./videos/translation_examples/phix/Sequence_387.gif" width="850" height="300" />
+<img src="./videos/translation_examples/phix/Sequence_404.gif" width="850" height="300" />
 
 </div>
 
@@ -138,8 +148,8 @@ In addition, for longer sequences, the model can struggle to capture all the fin
 
 <div align="center">
 
-<img src="./videos/translation_examples/phix/Sequence_395.gif" width="1080" height="350" />
-<img src="./videos/translation_examples/phix/Sequence_364.gif" width="1080" height="350" />
+<img src="./videos/translation_examples/phix/Sequence_395.gif" width="850" height="300" />
+<img src="./videos/translation_examples/phix/Sequence_364.gif" width="850" height="300" />
 
 </div>
 
@@ -147,9 +157,9 @@ In addition, for longer sequences, the model can struggle to capture all the fin
 
 <div align="center">
 
-<img src="./videos/translation_examples/mdgs/1178133-6_15.gif" width="1080" height="350" />
-<img src="./videos/translation_examples/mdgs/1178133-53_18.gif" width="1080" height="350" />
-<img src="./videos/translation_examples/mdgs/1428475-13374607-13392508-23_41.gif" width="1080" height="350" />
+<img src="./videos/translation_examples/mdgs/1178133-6_15.gif" width="850" height="300" />
+<img src="./videos/translation_examples/mdgs/1178133-53_18.gif" width="850" height="300" />
+<img src="./videos/translation_examples/mdgs/1428475-13374607-13392508-23_41.gif" width="850" height="300" />
 
 </div>
 
@@ -161,8 +171,8 @@ Plus, as Meine DGS is a challenging dataset, errors can occure from the translti
 
 <div align="center">
 
-<img src="./videos/translation_examples/mdgs/1290121-67_2.gif" width="1080" height="350" />
-<img src="./videos/translation_examples/mdgs/1290121-73_5.gif" width="1080" height="350" />
+<img src="./videos/translation_examples/mdgs/1290121-67_2.gif" width="850" height="300" />
+<img src="./videos/translation_examples/mdgs/1290121-73_5.gif" width="850" height="300" />
 
 </div>
 
@@ -170,24 +180,38 @@ Plus, as Meine DGS is a challenging dataset, errors can occure from the translti
 
 <div align="center">
 
-<img src="./videos/stitching_example/example1.gif" width="1080" height="350" />
-<img src="./videos/stitching_example/example2.gif" width="1080" height="350" />
-<img src="./videos/stitching_example/example3.gif" width="1080" height="350" />
+<img src="./videos/stitching_example/example1.gif" width="850" height="300" />
+<img src="./videos/stitching_example/example2.gif" width="850" height="300" />
+<img src="./videos/stitching_example/example3.gif" width="850" height="300" />
 
 
 </div>
 
 #### SignGAN Module
 
+Here we present outputs from the SignGAN module. The SignGAN module is trained to generate realistic signing sequences. But we do note some artifacts in the generated sequences, caused by projecting the skeleton to 2D.
+
+<div align="center">
+
+<img src="./videos/gan_examples/01April_2011_Friday_tagesschau-3388.gif" width="800" height="300" />
+<img src="./videos/gan_examples/26July_2010_Monday_tagesschau-6266.gif" width="800" height="300" />
+<img src="./videos/gan_examples/04July_2010_Sunday_tagesschau-7206.gif" width="800" height="300" />
+
+
+</div>
 
 #### Comparison to Progressive Transformer
 
-Here we compare our full approach to the progressive transformer. We apply both the contrastive learning and stitching module. Hence, the examples show smooth continuous signing.
+Here we compare our full approach to the progressive transformer. We apply stitching module. Hence, the examples show smooth continuous signing.
 
-<img src="./videos/pt_comparison/pt_comp_1.gif" width="1080" height="300" />
-<img src="./videos/pt_comparison/pt_comp_2.gif" width="1080" height="300" />
+<div align="center">
+
+<img src="./videos/pt_comparison/02November_2010_Tuesday_heute-2742_35.gif" width="850" height="300" />
+<img src="./videos/pt_comparison/12December_2011_Monday_tagesschau-8282_23.gif" width="850" height="300" />
+<img src="./videos/pt_comparison/30September_2012_Sunday_tagesschau-4038_4.gif" width="850" height="300" />
 
 
+</div>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
