@@ -1,15 +1,24 @@
 ## Chapter 5: Sign Stitching - Qualitative Evaluation
 
+Previous approaches have suffered from regression to the mean, caused by the models attempting to minimize their loss function. The easiest way for a pose regression models to do so is to predict a mean pose. The end results is under-articulated and incomprehensible signing. Additionally, previous works have implicitly modeled prosody, but due to the limited resources, it is often lost in production.
+
+Here we use dictionary example to create the expressive sequence of sign. 
 Overview of the approach to Sign Stitching:
 
 ![system_overview]
 *Fig. 1: System overview of our approach to \ac{slp}. a) Spoken language to Gloss++ (gloss, duration, facial token and cutoff) Transformer. b) Stitcher that creates a pose sequence from Gloss++. c) The SignGAN module that produces a photo-realistic signer conditioned on a pose sequence.*
 
-# Demos
+## Table of Contents
+- [Sign Stitching](#sign-stitching)
+    - [Sign Cropping (step 3)](#sign-cropping-step-3)
+    - [Smart Stitching (step 5)](#smart-stitching-step-5)
+    - [Filter Matching effect (step 7)](#filter-matching-effect-step-7)
+    - [Stitching Examples](#stitching-examples)
+- [Face Expression Dictionary](#face-expression-dictionary)
+- [Translation example](#translation-example)
+- [Comparison with Progressive Transformer](#comparison-with-progressive-transformer)
 
-Previous approaches have suffered from regression to the mean, caused by the models attempting to minimize their loss function. The easiest way for a pose regression models to do so is to predict a mean pose. The end results is under-articulated and incomprehensible signing. Additionally, previous works have implicitly modeled prosody, but due to the limited resources, it is often lost in production.
-
-Here we use dictionary example to create the expressive sequence of sign. 
+# Sign Stitching
 
 We start by showing the effect of different steps in the pipeline; 
 
@@ -135,11 +144,7 @@ Video 1: Original sequence, Video 2: Stitched sequence and Video 3: SignGAN outp
 
 ### German Sign Language - Deutsche Gebärdensprache
 
-[//]: # (17October_2009_Saturday_tagesschau-2138 MITTWOCH WEST WOLKE ACHT BIS SECHSZEHN)
-
-[//]: # (06January_2010_Wednesday_heute-3523 HEUTE NACHT MEHR SCHNEE NORD SUEDOST)
-
-[//]: # (05April_2010_Monday_tagesschau-3546 JETZT WETTER MORGEN DIENSTAG SECHSTE APRIL)
+<div align="center">
 
 **TEXT**: heute nacht dagegen fallen nur ein paar schneeflocken noch im norden und auch im südosten 	
 
@@ -173,8 +178,11 @@ Video 1: Original sequence, Video 2: Stitched sequence and Video 3: SignGAN outp
 
 <img src="videos/translations/TranslationDemo_phix_184.gif"/>
 
+</div>
 
 ### British Sign Language (BSL)
+
+<div align="center">
 
 **TEXT**: thats right indeed
 
@@ -192,11 +200,14 @@ Video 1: Original sequence, Video 2: Stitched sequence and Video 3: SignGAN outp
 
 <img src="videos/translations/TranslationDemo_bslcp_26.gif"/>
 
+</div>
 
 
 ### Failure Cases
 #### BSL
 Due to the lack of data, the translation model can struggle. Producing long repetitive sequences.
+
+<div align="center">
 
 **TEXT**: so he just got on with it 
 
@@ -214,10 +225,14 @@ Due to the lack of data, the translation model can struggle. Producing long repe
 
 <img src="videos/translations/TranslationDemo_bslcp_498.gif"/>
 
+</div>
+
 #### DGS
 
 Incorrect gloss prediction can lead to repetition in the predicted sequence. 'MODERN' is incorrectly predicted twice.
 In addition, bad face landmark detections by mediapipe can lead to incorrect face expressions.
+
+<div align="center">
 
 **TEXT**: da ist heute vieles modern gebaut worden 
 
@@ -227,7 +242,11 @@ In addition, bad face landmark detections by mediapipe can lead to incorrect fac
 
 <img src="videos/translations/TranslationDemo_mdgs_5598.gif"/>
 
+</div>
+
 Despite our additional optimization when extracting the ground truth from the original sequence, the approach still suffers when the signer's hands are occluded or off-screen.
+
+<div align="center">
 
 **TEXT**: und nun die wettervorhersage für morgen freitag den zehnten juli 	
 
@@ -237,12 +256,19 @@ Despite our additional optimization when extracting the ground truth from the or
 
 <img src="videos/translations/TranslationDemo_phix_279.gif"/>
 
+</div>
 
 ### Comparison with Progressive Transformer
 
 We also show a comparison between our approach and the baseline model, the progressive transformer (PT). See how model regresses to the mean and produces under-articulated and incomprehensible signing. 
 Note we can only compare against the PT as it is the only SLP model that is publicly available.
 
+<div align="center">
+
+<img src="./videos/pt_comp/pt_05April_2010_Monday_tagesschau-3546.gif"/>
+<img src="./videos/pt_comp/pt_06January_2010_Wednesday_heute-3523.gif" />
+<img src="./videos/pt_comp/pt_17October_2009_Saturday_tagesschau-2138.gif" />
+</div>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
