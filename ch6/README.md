@@ -7,6 +7,8 @@ Overview of the approach to Sign Language Production (SLP) using Vector Quantiza
 ![system_overview]
 *Fig. 1: A overview of our approach to Sign Language Production ( SLP). Showing from top to bottom 1) the source spoken language sentence, 2) the data-driven token representation of sign, 3) the synthesized pose sequence, and, 4) the original video.*
 
+📌 Companion codebase: [Sign VQ Transformer](https://github.com/walsharry/Sign-VQ-Transformer)
+
 ## Contents
 - [Codebook Visualization](#codebook-visualization)
   - [RWTH-PHOENIX-Weather-2014**T**](#rwth-phoenix-weather-2014t)
