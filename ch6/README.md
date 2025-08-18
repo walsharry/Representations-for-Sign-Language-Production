@@ -7,8 +7,6 @@ Overview of the approach to Sign Language Production (SLP) using Vector Quantiza
 ![system_overview]
 *Fig. 1: A overview of our approach to Sign Language Production ( SLP). Showing from top to bottom 1) the source spoken language sentence, 2) the data-driven token representation of sign, 3) the synthesized pose sequence, and, 4) the original video.*
 
-📌 Companion codebase: [Sign VQ Transformer](https://github.com/walsharry/Sign-VQ-Transformer)
-
 ## Contents
 - [Codebook Visualization](#codebook-visualization)
   - [RWTH-PHOENIX-Weather-2014**T**](#rwth-phoenix-weather-2014t)
@@ -19,6 +17,7 @@ Overview of the approach to Sign Language Production (SLP) using Vector Quantiza
   - [Stitching Module](#stitching-module)
   - [SignGAN Module](#signgan-module)
   - [Comparison to Progressive Transformer](#comparison-to-progressive-transformer)
+- [Publicly Released Code](#publicly-released-code)
 
     
 Previous approaches to SLP attempt to regress pose directly from the spoken language. This leads to under-articulated signing, as the signer regresses to the mean. Whereas, here by first learning a codebook we can ensure our new lexicon is expressive.
@@ -215,6 +214,10 @@ Here we compare our full approach to the progressive transformer. We apply stitc
 
 </div>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Publicly Released Code
+
+📌 Companion codebase: [Sign VQ Transformer](https://github.com/walsharry/Sign-VQ-Transformer)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [system_overview]: Images/vq_slp_overview.png
