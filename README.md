@@ -37,6 +37,8 @@ September 2024
 [Chapter 6 ](./ch6/README.md)
 
 ## Thesis PDF 
-Coming soon...
+
+Link to Thesis: [Harry_Walsh_Thesis.pdf](https://github.com/user-attachments/files/23163524/Harry_Walsh_Thesis.pdf)
+
 
 Copyright (c) 2025 Harry Walsh
